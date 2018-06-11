@@ -1,7 +1,7 @@
-const http = require('http');
+const Koa = require('koa');
+const app = new Koa();
 
 let fileData = `
-<!DOCTYPE html>
 <html>
   <head>
     <title>Google Sheets API Quickstart</title>
@@ -135,13 +135,8 @@ let fileData = `
 </html>
 `;
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain',
-                          'Trailer': 'Content-MD5' });
-  res.write('Hello');
-  res.end();
+app.use(async ctx => {
+  ctx.body = 'Hello World';
 });
-server.on('clientError', (err, socket) => {
-  socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
-});
-server.listen(8000);
+
+app.listen(3000);
