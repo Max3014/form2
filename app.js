@@ -138,7 +138,7 @@ let fileData = `
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain',
                           'Trailer': 'Content-MD5' });
-  res.write(fileData);
+  res.write('Hello');
   res.end();
 });
 server.on('clientError', (err, socket) => {
