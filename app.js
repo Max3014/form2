@@ -96,7 +96,7 @@ let fileData =
   "       */\n" +
   "      function appendPre(message) {\n" +
   "        var pre = document.getElementById('content');\n" +
-  "        var textContent = document.createTextNode(message + '\\n');\n" +
+  "        var textContent = document.createTextNode(message + '</br>');\n" +
   "        pre.appendChild(textContent);\n" +
   "      }\n" +
   "\n" +
