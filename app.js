@@ -18,7 +18,7 @@ let fileData =
   "\n" +
   '    <script type="text/javascript">\n' +
   "      // Client ID and API key from the Developer Console\n" +
-  "      var CLIENT_ID = '769067592560-mkjt9jv59e7sfubu69o4unp4jf4blhfq.apps.googleusercontent.com';\n" +
+  "      var CLIENT_ID =   '" + process.env.userId + "'\n" +
   "      var API_KEY = '" + process.env.apiKey + "'\n" +
   "\n" +
   "      // Array of API discovery doc URLs for APIs used by the quickstart\n" +
