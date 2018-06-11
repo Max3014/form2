@@ -1,4 +1,4 @@
-const Koa = require('koa');
+const Koa = require("koa");
 const app = new Koa();
 
 let fileData = `
@@ -136,7 +136,7 @@ let fileData = `
 `;
 
 app.use(async ctx => {
-  ctx.body = 'Hello World';
+  ctx.body = fileData;
 });
 
 app.listen(process.env.PORT || 3000);
