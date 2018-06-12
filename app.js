@@ -2,7 +2,7 @@ const Koa = require("koa");
 const app = new Koa();
 const koa_static = require('koa-static');
 
-app.use(koa_static(root, opts));
+app.use(koa_static('./static'));
 
 let fileData =
   "<html>\n" +
@@ -137,6 +137,6 @@ let fileData =
   "  </body>\n" +
   "</html>\n";
 
-app.use(serve('./static'));
+app.use(serve('index.html'));
 
 app.listen(process.env.PORT || 3000);
