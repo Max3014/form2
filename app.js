@@ -2,7 +2,7 @@ const Koa = require("koa");
 const app = new Koa();
 const serve = require('koa-static');
 
-app.use(serve('./static/index.html'));
+app.use(serve('static/index.html'));
 
 app.listen(process.env.PORT || 3000);
 
